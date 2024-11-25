@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bookmark</title>
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+
+        <!-- Style -->
+        <link rel="stylesheet" href="css/main.css">
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
+            integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap"
+            rel="stylesheet">
+
+    </head>
+    <body>
+        <div class="container py-5">
+            <header class="d-flex justify-content-center heading mb-5">
+                <h2>Bookmarker</h2>
+            </header>
+
+            <main>
+                <div class="body container px-4">
+                    <div
+                        class="head justify-content-center d-flex align-items-baseline">
+                        <i class="fa-solid fa-bookmark me-2"
+                            style="color: #21b600;"></i>
+                        <h2 class="h6 body-head">Bookmark Your Favorite
+                            Website</h2>
+                        <i class="fa-solid fa-bookmark ms-2"
+                            style="color: #c1ea0c;"></i>
+                    </div>
+
+                    <div class="form d-flex flex-column">
+                        <div class="py-3">
+                            <label for="siteName" class="d-block py-2">
+                                <i class="fa-solid fa-book-bookmark pe-2"></i>
+                                Site Name</label>
+
+                            <div class="input-group position-relative">
+                                <input type="text" id="siteName"
+                                    placeholder="Bookmark Name "
+                                    class="form-control">
+                                <i id="siteNameIcon"
+                                    class="validation-icon"></i>
+                            </div>
+                        </div>
+                        <div class="py-2">
+                            <label for="urlInput" class="d-block py-2">
+                                <i class="fa-solid fa-link pe-1"></i>
+                                Website URL</label>
+                            <div class="input-group position-relative">
+
+                                <input type="text" id="urlInput"
+                                    placeholder="Website URL"
+                                    class="form-control">
+
+                                <i id="urlIcon"
+                                    class="validation-icon"></i>
+                            </div>
+                        </div>
+
+                        <button id="submitButton"
+                            class="button btn btn-primary px-5 fs-6 my-3 align-self-center">Submit</button>
+
+                    </div>
+                </div>
+
+                <div class="container">
+                    <table class="w-100 my-2 py-2 bg-white text-center table">
+                        <thead>
+                            <tr>
+                                <th>Index</th>
+                                <th>Website Name</th>
+                                <th>Visit</th>
+                                <th>Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tableBody">
+
+                        </tbody>
+                    </table>
+                </div>
+            </main>
+        </div>
+
+        <script src="js/home.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+    </body>
+</html>
