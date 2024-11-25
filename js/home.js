@@ -51,14 +51,25 @@ submitButton.addEventListener('click', function (event) {
 
   var isSiteNameValid = validateSiteName();
   var isURLValid = validateURL();
+  var siteName = siteNameInput.value.trim();
+  var url = urlInput.value.trim();
+  var isDuplicate = false;
 
-  if (isSiteNameValid && isURLValid) {
+  for (var i = 0; i < bookmarksList.length; i++) {
+    if (bookmarksList[i].siteName.toLowerCase() === siteName.toLowerCase() || bookmarksList[i].url === url) {
+      isDuplicate = true;
+      break;
+    }
+  }
+
+  if (isSiteNameValid && isURLValid && !isDuplicate) {
     addBookmark();
     alert('Bookmark added successfully');
   } else {
     let message = 'Please correct the following errors:\n';
     if (!isSiteNameValid) message += '- Site name must be at least 3 characters long.\n';
     if (!isURLValid) message += '- URL must start with "https://" and end with a valid domain (.com, .org, etc).\n';
+    if (isDuplicate) message += '- This website already exists. Please use a different name or URL.';
     alert(message);
   }
 });
