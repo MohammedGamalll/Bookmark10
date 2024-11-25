@@ -91,7 +91,9 @@ function display() {
                       </button>
                     </td>
                     <td>
-                      <button onclick="deleteBookmark(${i})" class="btn btn-danger">Delete</button>
+                      <button onclick="deleteBookmark(${i})" class="btn btn-danger">
+                      <i class="fa-solid fa-trash-can"></i>
+                      Delete</button>
                     </td>
                   </tr>`;
   }
